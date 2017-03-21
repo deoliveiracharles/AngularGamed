@@ -1,0 +1,7 @@
+modificar o que vc quiser nesta pasta
+ng build --prod --base-href angular-demo
+
+acessar em localhost/angular-demo/myapp/dist
+
+criar componente de header
+ng g component header
