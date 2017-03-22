@@ -1,0 +1,54 @@
+﻿<div id="bodyLogin">
+    <div id="createAccount">
+        <div class= "container">
+            <img src="app/images/logo.png" alt=GamED LOGO>
+
+            <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                    <input type="text" name="firstName" placeholder=" First name"
+                    [(ngModel)]="model.firstName" #firstName="ngModel" required />
+                    <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
+                </div>
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                    <input type="text" name="lastName" placeholder=" Last name"
+                    [(ngModel)]="model.lastName" #lastName="ngModel" required />
+                    <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+                </div>
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                    <input type="text" name="username" placeholder=" Username"
+                    [(ngModel)]="model.username" #username="ngModel" required />
+                    <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+                </div>
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                    <input type="password" name="password" placeholder=" Password"
+                    [(ngModel)]="model.password" #password="ngModel" required />
+                    <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                </div>
+                <div class="form-group">
+                    <button class="btn-login">Register</button>
+                </div>
+                <p style="color:white;" >Already have an account? <a [routerLink]="['/login']" style="color:#f05822;">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--<div id="bodyLogin">
+    <div id="createAccount">
+        <div class= "container">
+        <img src="app/images/logo.png" alt=GamED LOGO>
+        
+        <form id="formCreateAccount" action="php/createAccount.php" method="post">
+        <input class="form-input" placeholder=" Username" type="text" name="username" /><br />
+        <input class="form-input" placeholder=" Password" type="password" name="password" /><br />
+        <input class="form-input" placeholder=" First name" type="text" name="first_name" /><br />
+        <input class="form-input" placeholder=" Last name" type="text" name="last_name" /><br />
+        <input class="form-input" placeholder=" Email" type="text" name="email" /><br />
+
+            <input type="submit" name="submit" value="Register" class="btn-login"/>
+        </form>
+        <p style="color:white;" >Already have an account? <a href="Index.html" style="color:#f05822;">Sign in</a></p>
+        </div>
+        
+    </div>
+</div>-->
